@@ -66,6 +66,9 @@ body {
 }
 
 .links .button{
+  margin-left: auto;
+  margin-right: auto;
+  width: 32.6rem;
   border: 2px solid var(--purple);
   border-radius: .4rem;
   padding: 1.2rem 0 1.3rem 0;
