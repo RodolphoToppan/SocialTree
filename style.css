@@ -49,7 +49,8 @@ body {
 
   object-fit: cover;
 }
-.avatar p {
+
+div.avatar p {
   font-weight: 300;
 
   text-align: center;
@@ -57,7 +58,7 @@ body {
   color: var(--purple);
 }
 
-.links{
+div.links{
   display: flex;
   flex-direction: column;
   justify-content: center;
