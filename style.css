@@ -5,8 +5,11 @@
 }
 
 :root {
-  --body-bg-color: #faf7fd;
-  --purple: #bb99dd;
+  --hue: 339;
+  --bg: hsl(var(--hue), 100%, 6%);
+  --primary-color: hsl(var(--hue), 67%, 52%);
+  --hover-color: hsl(calc(var(--hue) - 2), 69%, 38%);
+
 
   height: 100%;
   font-family: 'Poppins', sans-serif;
@@ -16,7 +19,7 @@
 }
 
 body {
-  background: var(--body-bg-color);
+  background: var(--bg);
   height: 100vh;
   width: 100vw;
 
@@ -32,19 +35,19 @@ body {
   margin: 0 4.4rem;
 }
 
-.avatar {
+div.avatar {
   text-align: center;
 
   margin-top: 12rem;
 }
 
-.avatar div img {
+div.avatar div img {
   clip-path: circle();
   width: 21.3rem;
   height: 21.3rem;
 
   border-radius: 50%;
-  border: 2px solid var(--purple);
+  border: 2px solid var(--primary-color);
   padding: 0.6rem;
 
   object-fit: cover;
@@ -55,10 +58,10 @@ div.avatar p {
 
   text-align: center;
 
-  color: var(--purple);
+  color: var(--primary-color);
 }
 
-div.links{
+ul.links{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,17 +71,28 @@ div.links{
   gap: 1.6rem;
 }
 
-.links .button{
+ul.links .button{
+  text-decoration: none;
   margin-left: auto;
   margin-right: auto;
   width: 32.6rem;
-  border: 2px solid var(--purple);
   border-radius: .4rem;
   padding: 1.2rem 0 1.3rem 0;
-
+  background: var(--primary-color);
+  transition: background 400ms;
 }
 
-.links a {
+ul.links .button p{
+  color: white;
+}
+
+
+ul.links .button:hover{
+  background: var(--hover-color);
+}
+
+
+ul.links a {
   text-decoration: none;
   text-align: center;
   align-items: center;
@@ -86,11 +100,12 @@ div.links{
 
 .socialMedia {
   display: flex;
-  list-style-type: none;
 
   justify-content: center;
   gap: 2.9rem;
 
   align-items: center;
   text-align: center;
+
+  cursor: pointer;
 }
